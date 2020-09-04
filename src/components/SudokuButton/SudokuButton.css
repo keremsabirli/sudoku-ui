@@ -1,0 +1,18 @@
+.button-cell {
+    border: 1px solid;
+    width: 128px;
+    height: 128px;
+    text-align: center;
+}
+.button-cell:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+.button-cell p {
+    margin-top: 20px;
+    font-size: 48px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}

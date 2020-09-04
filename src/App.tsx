@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Container, Row, Col } from "react-bootstrap";
+import { SudokuBoard } from './components/SudokuBoard/SudokuBoard';
+import { SudokuButtons } from "./components/SudokuButtons/SudokuButtons";
 
-function App() {
+export const App = () => {
+  const [selectedCell, setSelectedCell] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container fluid>
+        <Row>
+          {/* THIS IS THE SUDOKU BOARD */}
+          <Col>
+            <SudokuBoard></SudokuBoard>
+          </Col>
+          {/* THIS IS THE INPUT BUTTONS */}
+          <Col>
+            <SudokuButtons></SudokuButtons>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
-
-export default App;
